@@ -14,11 +14,14 @@ const forcast = (latitude,longitude,callback) => {
                } else {
                  callback(
                    undefined,
-                   "it is currently " +
+                   "It is currently " +
                      body.current.temperature +
-                     " degress out. it feels like " +
+                     " degress out, and it feels like " +
                      body.current.feelslike +
-                     " degress out"
+                     " degress out. " +
+                     "\nThe humidity level is " +
+                     body.current.humidity +
+                     " %"
                  );
                }
 
